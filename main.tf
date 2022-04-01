@@ -1,6 +1,6 @@
  # The configuration for the `remote` backend.
      terraform {
-       backend "remote" {
+       backend "S3" {
          # The name of your Terraform Cloud organization.
          organization = "example-organization"
 
