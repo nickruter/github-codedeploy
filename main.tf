@@ -1,12 +1,12 @@
  # The configuration for the `remote` backend.
      terraform {
-       backend "S3" {
+       backend "remote" {
          # The name of your Terraform Cloud organization.
-         organization = "example-organization"
+         organization = "Nickel"
 
          # The name of the Terraform Cloud workspace to store Terraform state files in.
          workspaces {
-           name = "example-workspace"
+           name = "workspace-nickel"
          }
        }
      }
