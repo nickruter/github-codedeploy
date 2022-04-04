@@ -60,6 +60,7 @@ jobs:
     defaults:
       run:
         shell: bash
+        
 
     steps:
     # Checkout the repository to the GitHub Actions runner
@@ -75,6 +76,14 @@ jobs:
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
+
+    # export aws creds Key
+    - name: export key Id
+      run: export AWS_ACCESS_KEY_ID=${{ secrets.TF_API_TOKEN }}
+
+    # export aws creds 
+    - name: export 
+      run: export AWS_SECRET_ACCESS_KEY=${{ secrets.TF_API_TOKEN }}
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
